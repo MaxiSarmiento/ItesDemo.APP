@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ItesDemo.APP.Views.ProductoDetallePage"
+             Title="Detalle del producto">
+
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+            <StackLayout>
+                <Image Source="https://i.ibb.co/441XSkv/logotipo.jpg" HeightRequest="120" HorizontalOptions="CenterAndExpand" />
+
+              
+                <Frame
+                    Margin="0,20,0,0"
+                    HeightRequest="160"
+                    WidthRequest="160"
+                    HorizontalOptions="Center" 
+                    Padding="0"
+                    IsClippedToBounds="True"
+                    CornerRadius="80">
+                    <Image
+                        Aspect="AspectFill"
+                        HeightRequest="160"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Source="{Binding ProductoModel.urlImagen}"
+                        WidthRequest="160"/>
+                </Frame>
+
+                <!-- Nombre del producto -->
+                <Label Text="{Binding ProductoModel.nombre}" FontSize="Medium" HorizontalOptions="Center" Margin="0,10,0,0" />
+
+                <!-- Otras características -->
+                <Label Text="{Binding ProductoModel.tipo, StringFormat='Tipo de producto: {0}'}" HorizontalOptions="Center" />
+                <Label Text="{Binding ProductoModel.descripcion, StringFormat='Descripcion del producto: {0}'}" HorizontalOptions="Center" />
+                <Label Text="{Binding ProductoModel.precio, StringFormat='Precio: {0:C}'}" HorizontalOptions="Center"/>
+                <Label Text="{Binding ProductoModel.stock, StringFormat='Stock: {0} unidades'}" HorizontalOptions="Center" />
+
+                <!-- Botón Volver -->
+                <Button Text="Volver" Clicked="OnVerListaClick" HorizontalOptions="Center" Margin="0,20,0,0" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

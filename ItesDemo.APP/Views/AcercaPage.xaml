@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ItesDemo.APP.Views.AcercaPage"
+             Title="AcercaPage">
+    <StackLayout>
+        
+        <Frame CornerRadius="10" BorderColor="white" Padding="3" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="https://i.ibb.co/vHGHWqP/fotomasich.png" Aspect="AspectFit" HeightRequest="250" WidthRequest="250" />
+        </Frame>
+        
+
+      
+        <Label Text="Maximiliano Sarmiento" HorizontalOptions="Center" VerticalOptions="Center" />
+        <Label Text="Desarrollo de Software" HorizontalOptions="Center" VerticalOptions="Center" />
+        <Label Text="3er Año" HorizontalOptions="Center" VerticalOptions="Center" />
+
+
+      
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button Text="GitHub" Clicked="OnGitHubButtonClicked" />
+            <Button Text="Linkedin" Clicked="OnLinkedinButtonClicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
