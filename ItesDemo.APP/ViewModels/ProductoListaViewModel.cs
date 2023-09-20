@@ -90,7 +90,7 @@ namespace ItesDemo.APP.ViewModels
 
         private void GoToCancelar()
         {
-            Application.Current.MainPage.Navigation.PopAsync();
+            Application.Current.MainPage.Navigation.PushAsync(new InicioPage());
         }
 
         private async Task GoToDetailAsync()

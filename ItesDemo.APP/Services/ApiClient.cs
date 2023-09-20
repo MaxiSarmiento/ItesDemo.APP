@@ -9,7 +9,7 @@ public class ApiClient
 {
      
     static HttpClient httpClient;
-    private Uri URL = new Uri("http://192.168.0.105:5003/api");
+    private Uri URL = new Uri("http://192.168.67.57:5003/api");
     
 
     public ApiClient()
