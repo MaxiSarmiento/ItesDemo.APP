@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using ItesDemo.APP.Models;
-
+using ItesDemo.APP.Views;
 namespace ItesDemo.APP.ViewModels
 {
 
@@ -12,6 +12,12 @@ namespace ItesDemo.APP.ViewModels
         {
             get { return productoModel; }
             set { SetProperty(ref productoModel, value); }
+        }
+        private async Task GoToBack()
+        {
+            await Application.Current.MainPage.Navigation.PopAsync();
+           
+
         }
     }
     }

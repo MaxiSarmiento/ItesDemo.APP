@@ -87,7 +87,7 @@ namespace ItesDemo.APP.ViewModels
             PerformSearch();
             IsBusy = IsRefreshing = false;
         }
-
+        //el current mainpage navigation vuelve a una pagina especifica , bah navega
         private void GoToCancelar()
         {
             Application.Current.MainPage.Navigation.PushAsync(new InicioPage());

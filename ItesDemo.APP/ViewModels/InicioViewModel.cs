@@ -10,11 +10,12 @@ public class InicioViewModel : BaseViewModel
     #endregion
 
     #region CONSTRUCTOR
+    
     public InicioViewModel()
     {
         Title = "Principal";
 
-        GoToListaProductoComando = new Command(() => GoToListaProducto());
+        GoToListaProductoComando = new Command(async () => GoToListaProducto());
         GoToAcercaComando = new Command(() => GoToAcerca());
         GoToExitCommand = new Command(() => Application.Current.MainPage = new LoginPage());
     }
